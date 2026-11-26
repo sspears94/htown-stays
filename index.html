@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>From H-Town STAYs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: warm, giddy fan-to-fan note
+   IDEA: the concert ticket from the keychain, opened up
+   PICTURE: traced Houston skyline at dusk with a setting sun and lit windows
+   COLOUR and TYPE: cream ticket, ink black, sunset orange; Anton + Poppins
+   LAYOUT: one ticket on one screen, stub on the left, stacks on phones */
+:root{color-scheme:light dark;--bg:light-dark(#f1e9da,#141012);--card:light-dark(#f7f1e5,#1d1719);--ink:light-dark(#121212,#f4ede1);--soft:light-dark(#5b544c,#b8ada0);--org:#ff7a18;--stub:#121212;--stubink:#f4ede1}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;min-height:100svh;background:var(--bg);color:var(--ink);font:16px/1.55 Poppins,system-ui,sans-serif;display:grid;place-items:center;padding:24px 16px;overflow-x:clip}
+.ticket{width:min(760px,100%);display:grid;grid-template-columns:72px minmax(0,1fr);background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.35)}
+.stub{background:var(--stub);color:var(--stubink);position:relative;display:grid;place-items:center}
+.stub span{writing-mode:vertical-rl;transform:rotate(180deg);font-weight:600;letter-spacing:.06em;font-size:15px;white-space:nowrap}
+.stub::after{content:"";position:absolute;right:-6px;top:10px;bottom:10px;width:12px;background:radial-gradient(circle,var(--card) 5px,transparent 5.5px) 0 0/12px 22px repeat-y}
+.main{display:flex;flex-direction:column}
+.top{padding:28px 32px 0}
+.kicker{font-weight:600;font-size:14px;color:var(--soft);margin:0}
+h1{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(34px,6vw,52px);line-height:1.05;margin:10px 0 6px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--org)}
+.stay{font-family:Anton,Impact,sans-serif;font-size:clamp(22px,3.4vw,28px);margin:0 0 4px}
+.scene{position:relative;aspect-ratio:1417/400;margin-top:8px}
+.scene svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.tribute{background:var(--stub);color:var(--stubink);padding:22px 32px 26px;border-top:4px solid var(--org)}
+.tribute p{margin:0;max-width:60ch}
+.tribute .big{font-family:Anton,Impact,sans-serif;font-size:clamp(24px,4vw,32px);line-height:1.1;margin-bottom:6px}
+.tribute .big b{color:var(--org);font-weight:400}
+.meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;margin-top:18px;font-size:13px;color:#b8ada0}
+.spark{transform-box:fill-box;transform-origin:center;animation:tw 2.6s ease-in-out infinite}
+.spark:nth-of-type(2n){animation-delay:-1.2s}.spark:nth-of-type(3n){animation-delay:-.6s}
+@keyframes tw{50%{transform:scale(.55);opacity:.55}}
+@media(prefers-reduced-motion:reduce){.spark{animation:none}}
+@media(max-width:600px){.ticket{grid-template-columns:minmax(0,1fr)}.stub{padding:10px}.stub span{writing-mode:horizontal-tb;transform:none}.stub::after{display:none}.top,.tribute{padding-inline:20px}}
+</style></head><body>
+<main class="ticket">
+  <div class="stub"><span>ADMIT ONE · STAY</span></div>
+  <div class="main">
+    <div class="top">
+      <p class="kicker">Stray Kids World Tour · RUN IT · Houston · June 5, 2027</p>
+      <h1>Stray Kids everywhere all around the world&hellip; and tonight, <em>H-Town</em>.</h1>
+      <p class="stay">You make Stray Kids STAY.</p>
+    </div>
+    <div class="scene" aria-label="Houston skyline at sunset">
+      <svg viewBox="0 0 1417 400" preserveAspectRatio="xMidYMax slice" role="img">
+        <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7a18" stop-opacity="0"/><stop offset="1" stop-color="#ff7a18" stop-opacity=".28"/></linearGradient></defs>
+        <rect width="1417" height="400" fill="url(#sky)"/>
+        <circle cx="1120" cy="300" r="120" fill="#ff7a18"/>
+        <g transform="translate(0,53)"><path id="city" d="M0 347 L0 185 L2 185 L4 184 L6 178 L8 169 L10 165 L12 164 L22 164 L24 163 L26 161 L28 114 L30 69 L32 67 L60 67 L62 68 L64 69 L66 69 L68 70 L70 70 L72 71 L92 71 L94 72 L96 73 L98 74 L100 75 L102 76 L104 77 L106 80 L108 220 L110 221 L114 221 L116 222 L118 222 L120 223 L122 224 L124 224 L126 225 L128 225 L130 226 L132 226 L134 227 L136 227 L138 228 L140 230 L142 238 L144 241 L146 242 L148 244 L150 245 L152 247 L154 248 L156 250 L158 251 L160 252 L162 254 L164 256 L166 257 L172 257 L174 256 L176 253 L178 252 L184 252 L186 253 L190 253 L192 254 L194 254 L196 255 L198 256 L200 257 L204 257 L206 258 L208 260 L210 263 L212 264 L214 264 L216 265 L220 265 L222 266 L224 269 L226 287 L228 288 L232 288 L234 287 L236 284 L238 283 L240 282 L244 282 L246 281 L248 278 L250 254 L252 163 L254 142 L256 140 L266 140 L268 141 L270 141 L272 140 L274 138 L276 135 L278 134 L280 133 L318 133 L320 132 L326 132 L328 136 L330 139 L332 141 L334 143 L336 144 L338 145 L340 146 L342 147 L344 147 L346 148 L348 149 L350 152 L352 305 L360 305 L362 304 L364 302 L366 293 L368 291 L378 291 L380 290 L382 288 L384 236 L386 172 L388 109 L390 44 L392 24 L394 23 L396 22 L398 22 L400 21 L402 21 L404 20 L406 18 L408 17 L414 17 L416 16 L418 14 L424 14 L426 13 L434 13 L436 14 L444 14 L446 15 L448 16 L450 17 L452 18 L454 19 L456 19 L458 20 L460 20 L462 21 L464 22 L466 23 L468 24 L470 26 L472 78 L474 80 L476 81 L478 82 L480 91 L482 93 L484 93 L486 94 L488 95 L490 96 L492 97 L494 98 L496 99 L498 102 L500 106 L502 109 L504 111 L506 114 L508 117 L510 123 L512 125 L514 127 L516 128 L518 128 L520 127 L522 127 L524 126 L526 126 L528 125 L530 124 L532 123 L534 123 L536 122 L538 121 L540 120 L574 120 L576 121 L578 122 L592 122 L594 123 L596 153 L598 155 L616 155 L618 156 L620 158 L622 159 L624 160 L626 161 L628 162 L630 164 L632 224 L634 225 L636 226 L638 226 L640 227 L650 227 L652 228 L654 229 L656 230 L658 230 L660 231 L662 233 L664 233 L666 234 L668 235 L670 236 L672 237 L674 237 L676 235 L678 233 L680 232 L688 232 L690 233 L692 234 L694 236 L696 238 L698 238 L700 240 L702 243 L704 245 L706 246 L708 247 L710 248 L712 249 L714 248 L716 224 L718 159 L720 104 L722 102 L724 101 L726 101 L728 100 L730 100 L732 99 L734 99 L736 98 L738 98 L740 97 L742 96 L744 95 L746 92 L748 91 L750 90 L756 90 L758 89 L778 89 L780 90 L782 94 L784 96 L786 97 L790 97 L792 98 L798 98 L800 99 L802 101 L804 103 L806 106 L808 288 L810 289 L818 289 L820 290 L822 291 L832 291 L834 290 L836 289 L840 289 L842 288 L858 288 L860 289 L862 290 L864 290 L866 291 L878 291 L880 292 L882 293 L884 294 L886 295 L888 297 L890 298 L896 298 L898 299 L900 300 L902 301 L904 302 L906 302 L908 303 L912 303 L914 302 L920 302 L922 301 L924 300 L926 299 L928 296 L930 272 L932 272 L934 271 L940 271 L942 272 L944 274 L946 275 L954 275 L956 276 L958 279 L960 282 L962 284 L964 285 L966 285 L968 286 L970 287 L972 289 L974 290 L976 268 L978 266 L980 265 L982 265 L984 263 L986 201 L988 139 L990 136 L992 134 L994 133 L998 133 L1000 132 L1002 132 L1004 131 L1006 131 L1008 130 L1010 130 L1012 129 L1014 129 L1016 128 L1018 128 L1020 127 L1022 127 L1024 126 L1026 126 L1028 125 L1038 125 L1040 124 L1042 123 L1052 123 L1054 124 L1064 124 L1066 125 L1068 125 L1070 126 L1072 128 L1074 273 L1076 274 L1080 274 L1082 273 L1084 264 L1086 226 L1088 224 L1090 223 L1092 223 L1094 222 L1096 221 L1098 220 L1122 220 L1124 221 L1126 222 L1128 223 L1130 224 L1132 225 L1134 241 L1136 292 L1138 293 L1140 293 L1142 295 L1144 301 L1146 305 L1148 308 L1150 312 L1152 313 L1154 314 L1156 315 L1158 324 L1160 326 L1164 326 L1166 327 L1168 327 L1170 328 L1174 328 L1176 327 L1178 326 L1180 325 L1188 325 L1190 326 L1192 327 L1194 328 L1196 329 L1198 333 L1200 335 L1202 335 L1204 332 L1206 331 L1208 330 L1218 330 L1220 331 L1222 330 L1224 329 L1226 327 L1228 325 L1230 286 L1232 176 L1234 145 L1236 141 L1238 136 L1240 134 L1242 131 L1244 128 L1246 124 L1248 121 L1250 118 L1252 114 L1254 112 L1256 110 L1258 109 L1272 109 L1274 110 L1276 111 L1278 113 L1280 117 L1282 121 L1284 123 L1286 126 L1288 131 L1290 135 L1292 138 L1294 211 L1296 313 L1298 314 L1300 318 L1302 329 L1304 333 L1306 338 L1310 338 L1312 337 L1314 336 L1316 335 L1320 335 L1322 318 L1324 317 L1334 317 L1336 316 L1338 309 L1340 254 L1342 223 L1344 217 L1346 216 L1348 216 L1350 215 L1352 214 L1364 214 L1366 215 L1370 215 L1372 214 L1402 214 L1404 215 L1406 215 L1408 216 L1410 217 L1412 180 L1414 179 L1416 179 L1416 347 Z" fill="#121212"/><g id="win" fill="#ffc45c"></g></g>
+        <g fill="#ff7a18"><path class="spark" d="M120 40l6 18 18 6-18 6-6 18-6-18-18-6 18-6z"/><path class="spark" d="M900 40l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" fill="#121212"/><path class="spark" d="M1300 80l5 15 15 5-15 5-5 15-5-15-15-5 15-5z"/><path class="spark" d="M640 120l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></g>
+      </svg>
+    </div>
+    <div class="tribute">
+      <p class="big">Seven on stage, <b>eight in our hearts.</b></p>
+      <p>Space City is saving a seat for Lee Know.</p>
+      <div class="meta"><span>A little gift from one STAY to another</span><span>Fan-made · not affiliated with JYP Entertainment</span></div>
+    </div>
+  </div>
+</main>
+<script>{
+  const p=document.getElementById('city'),g=document.getElementById('win');
+  if(p&&p.isPointInFill&&window.DOMPoint){let s=7,out='';const r=()=>(s=(s*16807)%2147483647)/2147483647;
+    for(let y=20;y<340;y+=16)for(let x=6;x<1410;x+=12){if(r()<.3&&p.isPointInFill(new DOMPoint(x,y))&&p.isPointInFill(new DOMPoint(x+5,y+8))&&p.isPointInFill(new DOMPoint(x,y-10)))out+=`<rect x="${x}" y="${y}" width="5" height="8"/>`}
+    g.innerHTML=out}
+}</script>
+</body></html>
